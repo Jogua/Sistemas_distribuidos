@@ -1,0 +1,2 @@
+cls
+"C:\Program Files\Java\jdk1.8.0_45\bin\java.exe" -cp . -Djava.rmi.server.codebase=file:C:/Users/jose/Desktop/practica2/ChatPrivado/ -Djava.rmi.server.hostname=localhost -Djava.security.policy=server.policy ChatPrivado_Server

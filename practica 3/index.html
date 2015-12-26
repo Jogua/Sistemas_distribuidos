@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Chat Instantáneo</title>
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
+        <link rel="icon" type="image/png" href="icono.png" />
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="./cliente.js"></script>
+    </head>
+
+    <body>
+        <div class="main_content">
+            <h1>Chat Instantáneo</h1>
+            <div id="div_pedir_nombre">
+                <!--javascript:void(0) para que no recargue la página cuando envie el formulario-->
+                <form action="javascript:void(0)" onsubmit="registrarse(this)">
+                    <label for="nombre">Introduce el nombre de usuario:</label>
+                    <br/>
+                    <input type="text" id="nombre" name="nombre" size="25" maxlength="20" autofocus required/>
+                    <br/>
+                    <p id="error_nombre_usuario" hidden>El nombre de usuario ya existe.</p>
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+            <div id="div_chat" hidden>
+                <div id="div_ventana_mensajes">
+                    <textarea id="ventana_mensajes" readonly></textarea>
+                </div>
+                <div id="div_lista_usuarios">
+
+                </div>
+                <div id="div_mensaje_enviar">
+                    <form action="javascript:void(0)" onsubmit="enviarMensaje()">
+                        <input type="text" id="mensaje_enviar" autofocus placeholder="Escribe un mensaje y pulsa intro para enviar"/>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

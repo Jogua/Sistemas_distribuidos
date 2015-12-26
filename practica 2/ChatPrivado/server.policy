@@ -1,0 +1,3 @@
+grant codeBase "file:/C:/Users/jose/Desktop/practica2/ChatPrivado/" {
+    permission java.security.AllPermission;
+};
